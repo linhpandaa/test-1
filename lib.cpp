@@ -1,10 +1,11 @@
 #include "lib.h"
 
+// tìm số chẵn lớn nhất của dãy số
 int maxEven(vector<int> v)
 {
-    int ans = v[0];
-    for (int i = 1; i < v.size(); i++)
-        if (v[i] > ans)
-            ans = v[i];
+    int ans = -1;
+    for (int x: v)
+        if (x % 2 == 0 && x > ans)
+            ans = x;
     return ans;
 }
